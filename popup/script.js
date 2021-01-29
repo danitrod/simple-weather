@@ -113,6 +113,8 @@ navigator.geolocation.getCurrentPosition(
           icon.setAttribute('src', '../assets/icons/sunrise.svg');
         } else if (isTimeInRange(nowTime, sunsetTime)) {
           icon.setAttribute('src', '../assets/icons/sunset.svg');
+        } else if (nowTime > sunsetTime || nowTime < sunriseTime) {
+          icon.setAttribute('src', '../assets/icons/moon.svg');
         } else {
           icon.setAttribute('src', '../assets/icons/sun.svg');
         }
