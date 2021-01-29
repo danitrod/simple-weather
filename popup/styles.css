@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(197, 234, 244);
+  width: 256px;
+  height: 256px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.temperature h2 {
+  margin-top: 8px;
+  font-size: 26px;
+  color: white;
+  text-shadow: 0 0 2px #000;
+}
