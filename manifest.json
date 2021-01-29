@@ -4,12 +4,12 @@
   "version": "0.1",
   "description": "Easily check the current weather and even receive notifications when it is going to rain!",
   "homepage_url": "https://github.com/danitrod/easy-weather",
-  "icons": {
-    "48": "icons/icon48.png"
+  "assets/icons": {
+    "48": "assets/icons/icon48.png"
   },
   "permissions": ["geolocation"],
   "browser_action": {
-    "default_icon": "icons/icon32.png",
+    "default_icon": "assets/icons/icon32.png",
     "default_title": "Easy Weather",
     "default_popup": "popup/index.html"
   }
