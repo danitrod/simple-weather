@@ -7,7 +7,7 @@
   "icons": {
     "48": "icons/icon48.png"
   },
-  "permissions": ["activeTab", "geolocation"],
+  "permissions": ["geolocation"],
   "browser_action": {
     "default_icon": "icons/icon32.png",
     "default_title": "Easy Weather",
