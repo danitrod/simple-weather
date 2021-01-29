@@ -1,16 +1,16 @@
 {
   "manifest_version": 2,
-  "name": "Easy Weather",
+  "name": "Simple Weather",
   "version": "0.1",
   "description": "Easily check the current weather and even receive notifications when it is going to rain!",
-  "homepage_url": "https://github.com/danitrod/easy-weather",
+  "homepage_url": "https://github.com/danitrod/simple-weather",
   "assets/icons": {
     "48": "assets/icons/icon48.png"
   },
   "permissions": ["geolocation"],
   "browser_action": {
     "default_icon": "assets/icons/icon32.png",
-    "default_title": "Easy Weather",
+    "default_title": "Simple Weather",
     "default_popup": "popup/index.html"
   }
 }

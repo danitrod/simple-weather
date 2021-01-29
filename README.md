@@ -1,3 +1,3 @@
-# Easy Weather
+# Simple Weather
 
 icon by [Yoji Inata](https://iconarchive.com/artist/yoji.html)
