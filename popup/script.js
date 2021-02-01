@@ -106,12 +106,12 @@ const fetchWeatherData = (settings) => {
           response.data.name + ' - ' + response.data.sys.country;
 
         // Set the icon accordingly
-        if (description == 'Clear sky') {
-          if (isTimeInRange(nowTime, sunriseTime)) {
-            icon.setAttribute('src', '../assets/icons/sunrise.svg');
-          } else if (isTimeInRange(nowTime, sunsetTime)) {
-            icon.setAttribute('src', '../assets/icons/sunset.svg');
-          } else if (nowTime > sunsetTime || nowTime < sunriseTime) {
+        if (isTimeInRange(nowTime, sunriseTime)) {
+          icon.setAttribute('src', '../assets/icons/sunrise.svg');
+        } else if (isTimeInRange(nowTime, sunsetTime)) {
+          icon.setAttribute('src', '../assets/icons/sunset.svg');
+        } else if (description == 'Clear sky') {
+          if (nowTime > sunsetTime || nowTime < sunriseTime) {
             icon.setAttribute('src', '../assets/icons/moon.svg');
           } else {
             icon.setAttribute('src', '../assets/icons/sun.svg');
