@@ -5,12 +5,6 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#greeting {
-  font-size: 32px;
-  font-weight: normal;
-  color: rgb(88, 31, 31);
-}
-
 .container {
   background-color: rgb(197, 234, 244);
   width: 384px;
@@ -22,6 +16,36 @@
   padding: 16px;
 }
 
+header {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 32px;
+}
+
+header .greeting {
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+}
+
+header .options {
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.options img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+#greeting {
+  font-size: 22px;
+  font-weight: normal;
+  color: rgb(88, 31, 31);
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -29,14 +53,27 @@
   align-items: center;
 }
 
-.icon img {
+#icon {
   width: 80px;
   height: 80px;
 }
 
-.temperature h2 {
+#temperature {
   margin-top: 8px;
   font-size: 26px;
-  color: white;
+  color: #fff;
   text-shadow: 0 0 2px #000;
+}
+
+#time {
+  margin-top: 8px;
+  font-size: 22px;
+  color: #820;
+  text-shadow: 0 0 2px #000;
+}
+
+#location {
+  margin-top: 8px;
+  font-size: 24px;
+  color: #555;
 }

@@ -6,10 +6,23 @@
   </head>
   <body>
     <div class="container">
-      <header><h1 id="greeting"></h1></header>
+      <header>
+        <div class="greeting">
+          <h1 id="greeting"></h1>
+        </div>
+        <div class="options">
+          <img id="options" src="../assets/icons/settings.svg" alt="options" />
+        </div>
+      </header>
       <div class="info">
-        <div class="icon"></div>
-        <div class="temperature"></div>
+        <div>
+          <img id="icon" src="../assets/spinner.svg" alt="Loading" />
+        </div>
+        <div>
+          <h2 id="temperature"></h2>
+          <h3 id="time"></h3>
+          <h4 id="location"></h4>
+        </div>
       </div>
       <div></div>
     </div>

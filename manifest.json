@@ -7,7 +7,10 @@
   "icons": {
     "48": "assets/icons/icon48.png"
   },
-  "permissions": ["geolocation"],
+  "permissions": ["geolocation", "storage"],
+  "options_ui": {
+    "page": "options/index.html"
+  },
   "browser_action": {
     "default_icon": "assets/icons/icon32.png",
     "default_title": "Simple Weather",
