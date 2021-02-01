@@ -51,6 +51,7 @@ header .options {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 #icon {
@@ -69,7 +70,6 @@ header .options {
   margin-top: 8px;
   font-size: 22px;
   color: #820;
-  text-shadow: 0 0 2px #000;
 }
 
 #location {

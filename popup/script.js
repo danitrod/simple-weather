@@ -86,7 +86,7 @@ const fetchWeatherData = (settings) => {
         const now = new Date();
         const nowTime = now.getTime();
 
-        // Generate greeting based on the sun
+        // Generate greeting based on the sun position
         const greetingText =
           nowTime < sunriseTime
             ? `Good evening, ${settings.name}!`
@@ -97,6 +97,13 @@ const fetchWeatherData = (settings) => {
             : `Good evening, ${settings.name}!`;
         const greetingH1 = document.getElementById('greeting');
         greetingH1.textContent = greetingText;
+
+        // Show the time
+        document.getElementById('time').textContent = formatTime(now);
+
+        // Show the location
+        document.getElementById('location').textContent =
+          response.data.name + ' - ' + response.data.sys.country;
 
         // Set the icon accordingly
         if (description == 'Clear sky') {
