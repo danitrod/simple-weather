@@ -1,6 +1,6 @@
 # Simple Weather
 
-![Demo](./small.gif)
+![Demo](./doc/demo.gif)
 
 ## About
 
