@@ -11,6 +11,7 @@ const openWeatherDescriptionsToIconNamesMap = {
   'Scattered clouds': 'cloud.svg',
   'Broken clouds': 'cloud.svg',
   'Shower rain': 'cloud-drizzle.svg',
+  'Light rain': 'cloud-drizzle.svg',
   'Moderate rain': 'cloud-drizzle.svg',
   Rain: 'cloud-rain.svg',
   Thunderstorm: 'cloud-lightning.svg',
