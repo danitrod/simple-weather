@@ -6,7 +6,7 @@
 }
 
 .container {
-  background-color: rgb(197, 234, 244);
+  background: linear-gradient(rgb(255, 255, 255), rgb(130, 232, 240));
   width: 384px;
   height: 384px;
   display: flex;
