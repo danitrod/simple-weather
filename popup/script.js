@@ -11,11 +11,11 @@ const openWeatherDescriptionsToIconNamesMap = {
   'Scattered clouds': 'cloud.svg',
   'Broken clouds': 'cloud.svg',
   'Shower rain': 'cloud-drizzle.svg',
+  'Moderate rain': 'cloud-drizzle.svg',
   Rain: 'cloud-rain.svg',
   Thunderstorm: 'cloud-lightning.svg',
   Snow: 'cloud-snow.svg',
-  Mist: 'cloud.svg',
-  other: ERROR_ICON
+  Mist: 'cloud.svg'
 };
 
 // Util functions
@@ -122,7 +122,7 @@ const fetchWeatherData = (settings) => {
         } else {
           let iconName = openWeatherDescriptionsToIconNamesMap[description];
           if (!iconName) {
-            iconName = 'other';
+            iconName = ERROR_ICON;
           }
           icon.setAttribute('src', `../assets/icons/${iconName}`);
         }
