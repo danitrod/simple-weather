@@ -10,4 +10,6 @@ Simple Weather is a Firefox add-on that enables you to easily check the weather 
 
 ## License
 
+Project is licensed under the [Mozilla Public License](./LICENSE).
+
 The app icon was produced by [Yoji Inata](https://iconarchive.com/artist/yoji.html)
