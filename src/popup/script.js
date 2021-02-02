@@ -140,7 +140,7 @@ browser.storage.local
   .then((result) => {
     if (!result || Object.keys(result) < 1) {
       error(
-        'Greetings! To start using Simple Weather, please create an API key on OpenWeatherMap and save it in the options page.'
+        'Greetings! To get started, please create an API key on OpenWeatherMap and save it in the add-on settings.'
       );
     } else {
       fetchWeatherData(result.credentials);
