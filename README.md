@@ -1,7 +1,7 @@
 # Simple Weather
 
 <div align="center">
-    <img src="./doc/demo.gif" height="640px" width="360px" alt="demo" />
+    <img src="./doc/demo.gif" height="360px" width="640px" alt="demo" />
 </div>
 
 ## About
