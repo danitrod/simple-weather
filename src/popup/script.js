@@ -47,13 +47,13 @@ const jsonHttpRequest = async (url) => {
   try {
     response = await fetch(url);
   } catch {
-    return { err: true };
+    return { err: true, msg: 'Request failed' };
   }
 
   try {
     response = await response.json();
   } catch {
-    return { err: true };
+    return { err: true, msg: 'Invalid request' };
   }
 
   return { err: false, data: response };
@@ -72,7 +72,6 @@ const fetchWeatherData = (settings) => {
       const temperature = document.getElementById('temperature');
       if (response.err) {
         error(response.msg);
-        temperature.textContent = 'Error: Could not fetch weather data';
       } else {
         // Set the temperature text
         let description = response.data.weather[0].description;
@@ -148,6 +147,6 @@ browser.storage.local
     }
   })
   .catch((err) => {
+    error('Error accessing add-on storage');
     console.error('Error accessing addon storage:', err);
-    document.getElementById('greeting').textContent = 'ERR:' + err;
   });
