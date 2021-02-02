@@ -30,7 +30,7 @@ const formatTime = (date) => {
 
 const error = (details) => {
   const icon = document.getElementById('icon');
-  icon.setAttribute('src', `../assets/icons/${ERROR_ICON}`);
+  icon.setAttribute('src', `../../assets/icons/${ERROR_ICON}`);
 
   document.getElementById('location').textContent = details;
 };
@@ -111,21 +111,21 @@ const fetchWeatherData = (settings) => {
 
         // Set the icon accordingly
         if (isTimeInRange(nowTime, sunriseTime)) {
-          icon.setAttribute('src', '../assets/icons/sunrise.svg');
+          icon.setAttribute('src', '../../assets/icons/sunrise.svg');
         } else if (isTimeInRange(nowTime, sunsetTime)) {
-          icon.setAttribute('src', '../assets/icons/sunset.svg');
+          icon.setAttribute('src', '../../assets/icons/sunset.svg');
         } else if (description == 'Clear sky') {
           if (nowTime > sunsetTime || nowTime < sunriseTime) {
-            icon.setAttribute('src', '../assets/icons/moon.svg');
+            icon.setAttribute('src', '../../assets/icons/moon.svg');
           } else {
-            icon.setAttribute('src', '../assets/icons/sun.svg');
+            icon.setAttribute('src', '../../assets/icons/sun.svg');
           }
         } else {
           let iconName = openWeatherDescriptionsToIconNamesMap[description];
           if (!iconName) {
             iconName = ERROR_ICON;
           }
-          icon.setAttribute('src', `../assets/icons/${iconName}`);
+          icon.setAttribute('src', `../../assets/icons/${iconName}`);
         }
       }
     },

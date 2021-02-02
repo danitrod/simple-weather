@@ -9,11 +9,11 @@
   },
   "permissions": ["geolocation", "storage"],
   "options_ui": {
-    "page": "options/index.html"
+    "page": "src/options/index.html"
   },
   "browser_action": {
     "default_icon": "assets/icons/icon32.png",
     "default_title": "Simple Weather",
-    "default_popup": "popup/index.html"
+    "default_popup": "src/popup/index.html"
   }
 }
