@@ -8,7 +8,7 @@ Simple Weather is a Firefox add-on that enables you to easily check the weather 
 
 ## Quick start
 
-1. Install and enable the add-on;
+1. [Install and enable the add-on](https://addons.mozilla.org/en-US/firefox/addon/easy-simple-weather/);
 2. [Create a free account on Open Weather Map](https://home.openweathermap.org/users/sign_up);
 3. [Copy your OWM API key](https://home.openweathermap.org/api_keys);
 4. Open the add-on settings page and insert your API key.
