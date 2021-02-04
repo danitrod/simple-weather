@@ -5,7 +5,41 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.opt-in {
+  max-width: 384px;
+  max-height: 384px;
+  padding: 20px;
+}
+
+.opt-in p {
+  margin-bottom: 8px;
+}
+
+.opt-in button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+#button-continue {
+  background-color: #3f8;
+  margin-right: 8px;
+}
+
+#button-continue:hover {
+  border-color: #2a6;
+  /* background-color: #2a6; */
+}
+
+#button-cancel:hover {
+  border-color: #ccc;
+}
+
 .container {
+  visibility: collapse; /* hide before opting in */
   background: linear-gradient(rgb(255, 255, 255), rgb(130, 232, 240));
   width: 384px;
   height: 384px;

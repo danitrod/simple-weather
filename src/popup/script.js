@@ -47,7 +47,10 @@ const jsonHttpRequest = async (url) => {
   try {
     response = await fetch(url);
   } catch {
-    return { err: true, msg: 'Request failed' };
+    return {
+      err: true,
+      msg: 'Request failed. Check if your internet connection is stable.'
+    };
   }
 
   try {
@@ -134,19 +137,42 @@ const fetchWeatherData = (settings) => {
   );
 };
 
-// Settings
-browser.storage.local
-  .get('credentials')
-  .then((result) => {
-    if (!result || Object.keys(result) < 1) {
-      error(
-        'Greetings! To get started, please create an API key on OpenWeatherMap and save it in the add-on settings.'
-      );
-    } else {
-      fetchWeatherData(result.credentials);
-    }
-  })
-  .catch((err) => {
-    error('Error accessing add-on storage');
-    console.error('Error accessing addon storage:', err);
+const launchOptIn = () => {
+  document.getElementById('button-continue').addEventListener('click', () => {
+    document.getElementById('button-cancel').textContent = 'foi';
+    browser.storage.local.set({ 'opt-in': true });
+    window.location.reload();
   });
+  document.getElementById('button-cancel').addEventListener('click', () => {
+    window.close();
+  });
+};
+
+// Check if used opted in before launching app
+browser.storage.local.get('opt-in').then((result) => {
+  if (!result || Object.keys(result).length < 1 || !result['opt-in']) {
+    launchOptIn();
+  } else {
+    // Remove opt-in and show app
+    document.getElementsByClassName('opt-in')[0].remove();
+    document.getElementsByClassName('container')[0].style.visibility =
+      'visible';
+
+    // Get user settings
+    browser.storage.local
+      .get('credentials')
+      .then((result) => {
+        if (!result || Object.keys(result).length < 1) {
+          error(
+            'To get started, please create an API key on OpenWeatherMap and save it in the add-on settings.'
+          );
+        } else {
+          fetchWeatherData(result.credentials);
+        }
+      })
+      .catch((err) => {
+        error('Error accessing add-on storage');
+        console.error('Error accessing addon storage:', err);
+      });
+  }
+});
