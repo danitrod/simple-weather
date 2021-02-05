@@ -10,6 +10,7 @@ const openWeatherDescriptionsToIconNamesMap = {
   'Few clouds': 'cloud.svg',
   'Scattered clouds': 'cloud.svg',
   'Broken clouds': 'cloud.svg',
+  'Overcast clouds': 'cloud.svg',
   'Shower rain': 'cloud-drizzle.svg',
   'Light rain': 'cloud-drizzle.svg',
   'Moderate rain': 'cloud-drizzle.svg',
